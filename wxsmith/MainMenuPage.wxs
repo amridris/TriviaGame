@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="MainMenuPage">
+		<title>Trivia Menu</title>
+		<centered>1</centered>
+		<size>400,470</size>
+		<object class="wxPanel" name="ID_PANEL1" variable="menuPanel" member="yes">
+			<pos>200,240</pos>
+			<size>320,470</size>
+			<object class="wxButton" name="ID_BUTTON1" variable="startNewGameBtn" member="yes">
+				<label>Start New Game</label>
+				<pos>128,208</pos>
+				<size>144,40</size>
+				<handler function="OnstartNewGameBtnClick" entry="EVT_BUTTON" />
+			</object>
+			<object class="wxButton" name="ID_BUTTON2" variable="optionFrameBtn" member="yes">
+				<label>Options</label>
+				<pos>128,296</pos>
+				<size>144,32</size>
+				<handler function="OnoptionFrameBtnClick" entry="EVT_BUTTON" />
+			</object>
+			<object class="wxButton" name="ID_BUTTON3" variable="quitBtn" member="yes">
+				<label>Quit</label>
+				<pos>128,384</pos>
+				<size>144,32</size>
+				<handler function="OnquitBtnClick" entry="EVT_BUTTON" />
+			</object>
+			<object class="wxStaticBitmap" name="ID_STATICBITMAP1" variable="StaticBitmap1" member="yes">
+				<bitmap>/home/aamer/CodeBlocksProjects/TriviaGame/triviaGame/assests/triviaImg.jpg</bitmap>
+				<pos>8,8</pos>
+				<size>384,144</size>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="menuStatusBar" member="yes">
+			<fields>1</fields>
+			<widths>-10</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuQuit" member="yes">
+					<label>Quit</label>
+					<help>Quit application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu3" member="yes">
+				<label>Help</label>
+				<object class="wxMenuItem" name="ID_MENUITEM2" variable="aboutMenu" member="yes">
+					<label>About</label>
+					<help>Application Information</help>
+					<handler function="OnaboutMenuSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxMessageDialog" name="ID_MESSAGEDIALOG1" variable="aboutDialog" member="yes">
+			<caption>Message</caption>
+			<message>Trivia Game created for CMPE 135 class Demo&#x0A;Creators: Aamer Idris</message>
+			<style>wxOK</style>
+		</object>
+	</object>
+</wxsmith>
