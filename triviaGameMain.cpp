@@ -206,7 +206,7 @@ void triviaGameFrame::OnnextQuestionClick(wxCommandEvent& event)
         Hide();
         mainGameEngine->reset();
         getNextQuestion();
-        current_round = 1;
+        current_round = 0;
     }
     current_round++;
     enableBtns();
