@@ -15,7 +15,6 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../../../../../usr/include" />
 				</Compiler>
 				<Linker>
 					<Add directory="../../../../../usr/include" />
@@ -29,7 +28,6 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="../../../../../usr/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -46,10 +44,14 @@
 			<Add option="`wx-config --libs`" />
 			<Add directory="../../../../../usr/include" />
 		</Linker>
+		<Unit filename="MainMenuPage.cpp" />
+		<Unit filename="MainMenuPage.h" />
 		<Unit filename="database.h" />
 		<Unit filename="gameLogic.h" />
 		<Unit filename="gameScore.h" />
 		<Unit filename="json.hpp" />
+		<Unit filename="optionPage.cpp" />
+		<Unit filename="optionPage.h" />
 		<Unit filename="player.h" />
 		<Unit filename="questionChoiceBank.h" />
 		<Unit filename="questions.json" />
@@ -59,13 +61,9 @@
 		<Unit filename="triviaGameEngine.h" />
 		<Unit filename="triviaGameMain.cpp" />
 		<Unit filename="triviaGameMain.h" />
-		<Unit filename="MainMenuPage.h" />
-		<Unit filename="MainMenuPage.cpp" />
-		<Unit filename="optionPage.h"/>
-		<Unit filename="optionPage.cpp"/>
+		<Unit filename="wxsmith/MainMenuPage.wxs" />
+		<Unit filename="wxsmith/optionPage.wxs" />
 		<Unit filename="wxsmith/triviaGameframe.wxs" />
-		<Unit filename="wxsmith/optionPage.wxs"/>
-		<Unit filename="wxsmith/MainMenuPage.wxs"/>
 		<Extensions>
 			<envvars />
 			<code_completion />
@@ -73,9 +71,8 @@
 				<gui name="wxWidgets" src="triviaGameApp.cpp" main="triviaGameFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/triviaGameframe.wxs" src="triviaGameMain.cpp" hdr="triviaGameMain.h" fwddecl="0" i18n="1" name="triviaGameFrame" language="CPP" />
-<wxFrame wxs="wxsmith/MainMenuPage.wxs" src="MainMenuPage.cpp" hdr="MainMenuPage.h" fwddecl="0" i18n="1" name="MainMenuPage" language="CPP" />
-<wxFrame wxs="wxsmith/optionPage.wxs" src="optionPage.cpp" hdr="optionPage.h" fwddecl="0" i18n="1" name="optionPage" language="CPP" />
-
+					<wxFrame wxs="wxsmith/MainMenuPage.wxs" src="MainMenuPage.cpp" hdr="MainMenuPage.h" fwddecl="0" i18n="1" name="MainMenuPage" language="CPP" />
+					<wxFrame wxs="wxsmith/optionPage.wxs" src="optionPage.cpp" hdr="optionPage.h" fwddecl="0" i18n="1" name="optionPage" language="CPP" />
 				</resources>
 			</wxsmith>
 			<debugger />
