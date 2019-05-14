@@ -99,7 +99,7 @@ triviaGameFrame::triviaGameFrame(wxWindow* parent,wxWindowID id)
     choice_b_btn = new wxButton(mainPanel, ID_BUTTON2, _("Label"), wxPoint(72,392), wxSize(200,32), 0, wxDefaultValidator, _T("ID_BUTTON2"));
     choice_c_btn = new wxButton(mainPanel, ID_BUTTON3, _("Label"), wxPoint(480,320), wxSize(200,32), 0, wxDefaultValidator, _T("ID_BUTTON3"));
     choice_d_btn = new wxButton(mainPanel, ID_BUTTON4, _("Label"), wxPoint(480,392), wxSize(200,32), 0, wxDefaultValidator, _T("ID_BUTTON4"));
-    StaticBitmap1 = new wxStaticBitmap(mainPanel, ID_STATICBITMAP1, wxBitmap(wxImage(_T("/home/aamer/CodeBlocksProjects/TriviaGame/triviaGame/assests/trivia.jpeg")).Rescale(wxSize(800,192).GetWidth(),wxSize(800,192).GetHeight())), wxPoint(0,0), wxSize(800,192), wxSIMPLE_BORDER, _T("ID_STATICBITMAP1"));
+    StaticBitmap1 = new wxStaticBitmap(mainPanel, ID_STATICBITMAP1, wxBitmap(wxImage(_T("assests/trivia.jpeg")).Rescale(wxSize(800,192).GetWidth(),wxSize(800,192).GetHeight())), wxPoint(0,0), wxSize(800,192), wxSIMPLE_BORDER, _T("ID_STATICBITMAP1"));
     StaticText1 = new wxStaticText(mainPanel, ID_STATICTEXT2, _("1"), wxPoint(8,328), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     wxFont StaticText1Font(12,wxFONTFAMILY_SWISS,wxFONTSTYLE_ITALIC,wxFONTWEIGHT_BOLD,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     StaticText1->SetFont(StaticText1Font);
@@ -124,7 +124,7 @@ triviaGameFrame::triviaGameFrame(wxWindow* parent,wxWindowID id)
     fileMenu->Append(MenuItem1);
     menuBar->Append(fileMenu, _("&File"));
     Menu2 = new wxMenu();
-    MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Fun Trivia Game Demo for CMPE 135 Class"), wxITEM_NORMAL);
+    MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
     Menu2->Append(MenuItem2);
     menuBar->Append(Menu2, _("Help"));
     SetMenuBar(menuBar);
@@ -219,7 +219,6 @@ void triviaGameFrame::Onchoice_a_btnClick(wxCommandEvent& event)
     is_it_correct = mainGameEngine->checkValue(1, random_question_index);
     if(is_it_correct){
         choice_a_btn->SetLabel("correct Choice!");
-        choice_a_btn->SetBackgroundColour(*wxGREEN);
         mainGameEngine->incrementScore();
     }
     else{
@@ -238,7 +237,6 @@ void triviaGameFrame::Onchoice_b_btnClick(wxCommandEvent& event)
     is_it_correct = mainGameEngine->checkValue(2, random_question_index);
     if(is_it_correct){
         choice_b_btn->SetLabel("correct Choice!");
-        choice_b_btn->SetBackgroundColour(*wxGREEN);
         mainGameEngine->incrementScore();
     }
     else{
@@ -255,7 +253,6 @@ void triviaGameFrame::Onchoice_c_btnClick(wxCommandEvent& event)
     is_it_correct = mainGameEngine->checkValue(3, random_question_index);
     if(is_it_correct){
         choice_c_btn->SetLabel("correct Choice!");
-        choice_c_btn->SetBackgroundColour(*wxGREEN);
         mainGameEngine->incrementScore();
     }
     else{
@@ -272,7 +269,6 @@ void triviaGameFrame::Onchoice_d_btnClick(wxCommandEvent& event)
     is_it_correct = mainGameEngine->checkValue(4, random_question_index);
     if(is_it_correct){
         choice_d_btn->SetLabel("correct Choice!");
-        choice_d_btn->SetBackgroundColour(*wxGREEN);
         mainGameEngine->incrementScore();
     }
     else{

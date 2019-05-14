@@ -33,7 +33,7 @@ MainMenuPage::MainMenuPage(wxWindow* parent,wxWindowID id)
 	startNewGameBtn = new wxButton(menuPanel, ID_BUTTON1, _("Start New Game"), wxPoint(128,208), wxSize(144,40), 0, wxDefaultValidator, _T("ID_BUTTON1"));
 	optionFrameBtn = new wxButton(menuPanel, ID_BUTTON2, _("Options"), wxPoint(128,296), wxSize(144,32), 0, wxDefaultValidator, _T("ID_BUTTON2"));
 	quitBtn = new wxButton(menuPanel, ID_BUTTON3, _("Quit"), wxPoint(128,384), wxSize(144,32), 0, wxDefaultValidator, _T("ID_BUTTON3"));
-	StaticBitmap1 = new wxStaticBitmap(menuPanel, ID_STATICBITMAP1, wxBitmap(wxImage(_T("/home/aamer/CodeBlocksProjects/TriviaGame/triviaGame/assests/triviaImg.jpg")).Rescale(wxSize(384,144).GetWidth(),wxSize(384,144).GetHeight())), wxPoint(8,8), wxSize(384,144), wxSIMPLE_BORDER, _T("ID_STATICBITMAP1"));
+	StaticBitmap1 = new wxStaticBitmap(menuPanel, ID_STATICBITMAP1, wxBitmap(wxImage(_T("assests/triviaImg.jpg")).Rescale(wxSize(384,144).GetWidth(),wxSize(384,144).GetHeight())), wxPoint(8,8), wxSize(384,144), wxSIMPLE_BORDER, _T("ID_STATICBITMAP1"));
 	menuStatusBar = new wxStatusBar(this, ID_STATUSBAR1, 0, _T("ID_STATUSBAR1"));
 	int __wxStatusBarWidths_1[1] = { -10 };
 	int __wxStatusBarStyles_1[1] = { wxSB_NORMAL };

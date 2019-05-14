@@ -41,7 +41,7 @@ optionPage::optionPage(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
 	difficultyLevelSet->Append(_("Medium"));
 	difficultyLevelSet->Append(_("Hard"));
 	TextCtrl1 = new wxTextCtrl(optionPanel, ID_TEXTCTRL1, _("Your\'re name here"), wxPoint(168,152), wxSize(144,32), 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
-	StaticBitmap1 = new wxStaticBitmap(optionPanel, ID_STATICBITMAP1, wxBitmap(wxImage(_T("/home/aamer/CodeBlocksProjects/TriviaGame/triviaGame/assests/options.jpg")).Rescale(wxSize(400,144).GetWidth(),wxSize(400,144).GetHeight())), wxPoint(0,0), wxSize(400,144), wxSIMPLE_BORDER, _T("ID_STATICBITMAP1"));
+	StaticBitmap1 = new wxStaticBitmap(optionPanel, ID_STATICBITMAP1, wxBitmap(wxImage(_T("assests/options.jpg")).Rescale(wxSize(400,144).GetWidth(),wxSize(400,144).GetHeight())), wxPoint(0,0), wxSize(400,144), wxSIMPLE_BORDER, _T("ID_STATICBITMAP1"));
 	saveOptionBtn = new wxButton(optionPanel, ID_BUTTON1, _("Save Options"), wxPoint(136,368), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
 
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&optionPage::OnsaveOptionBtnClick);
